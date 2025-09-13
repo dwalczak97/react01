@@ -1,14 +1,14 @@
-export const Card = (props) =>{
-  return (
+// export const Card = (props) =>{
+//   return (
 
-    <div>
-      <img src={props.avatar} alt="avatar"/>
-      <p>{props.name}</p>
-      <p>{props.tag}</p>
-      <p>{props.location}</p>
-    </div>
+//     <div>
+//       <img src={props.avatar} alt="avatar"/>
+//       <p>{props.name}</p>
+//       <p>{props.tag}</p>
+//       <p>{props.location}</p>
+//     </div>
 
    
 
-  );
-}
+//   );
+// };

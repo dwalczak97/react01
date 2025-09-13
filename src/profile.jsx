@@ -1,29 +1,36 @@
-import Card from "./card.jsx"
-import List from "./list.jsx"
 
-export const Profile = () => {
+const Profile = (props) => {
+return (
+    <div>
+   <div>
+      <img src={props.avatar} alt="avatar"/>
+      <p>{props.name}</p>
+      <p>{props.tag}</p>
+      <p>{props.location}</p>
+    </div>
 
-const userData = {
-  username: "Jacques Gluke",
-  tag: "jgluke",
-  location: "Ocho Rios, Jamaica",
-  avatar: "<https://cdn-icons-png.flaticon.com/512/2922/2922506.png>",
-  stats: {
-    followers: 5603,
-    views: 4827,
-    likes: 1308
-  }
+     <ul>
+          
+    <li>
+      <span>Followers</span>
+      <span>{props.followers}</span>
+    </li>
+    <li>
+      <span>Views</span>
+      <span>{props.views}</span>
+    </li>
+    <li>
+      <span>Likes</span>
+      <span>{props.likes}</span>
+    </li>
+
+    </ul>
+
+
+
+    </div>
+    );
+
+
 };
-
-    return (
-        <>
-        <Card avatar={userData.avatar} name={userData.username} 
-        tag={userData.tag} location={userData.location} 
- />
-       <List followers={userData.stats.followers} 
-       views={userData.stats.views} likes={userData.stats.likes}/>
-        </>
-    )
-
-
-}
+export default Profile;
