@@ -3,7 +3,7 @@ import "./App.css"
 const Profile = (props) => {
 return (
     <div className="box">
-   <div>
+   <div className="box-for-flex">
       <img src={props.image} alt="avatar" className="image"/>
       <h3>{props.name}</h3>
       <p className="colorp">@{props.tag}</p>
