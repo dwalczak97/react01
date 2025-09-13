@@ -3,9 +3,9 @@ const Profile = (props) => {
 return (
     <div>
    <div>
-      <img src={props.avatar} alt="avatar"/>
+      <img src={props.image} alt="avatar"/>
       <p>{props.name}</p>
-      <p>{props.tag}</p>
+      <p>@{props.tag}</p>
       <p>{props.location}</p>
     </div>
 
