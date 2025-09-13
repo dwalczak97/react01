@@ -1,25 +1,26 @@
+import "./App.css"
 
 const Profile = (props) => {
 return (
-    <div>
+    <div className="box">
    <div>
-      <img src={props.image} alt="avatar"/>
-      <p>{props.name}</p>
-      <p>@{props.tag}</p>
-      <p>{props.location}</p>
+      <img src={props.image} alt="avatar" className="image"/>
+      <h3>{props.name}</h3>
+      <p className="colorp">@{props.tag}</p>
+      <p className="colorp">{props.location}</p>
     </div>
 
-     <ul>
+     <ul className="ul">
           
-    <li>
+    <li className="li">
       <span>Followers</span>
       <span>{props.followers}</span>
     </li>
-    <li>
+    <li className="li">
       <span>Views</span>
       <span>{props.views}</span>
     </li>
-    <li>
+    <li className="li"> 
       <span>Likes</span>
       <span>{props.likes}</span>
     </li>
