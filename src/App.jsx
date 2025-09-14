@@ -1,6 +1,7 @@
 // import userData from "./userData.json";
 import Profile from "./profile.jsx"
 import FriendList from "./friendsList.jsx"
+import TransactionHistory from "./transaction.jsx"
 
   
 const userData = {
@@ -28,6 +29,7 @@ const App = () => {
         likes={userData.stats.likes}
       />
       <FriendList  />
+      <TransactionHistory/>
     </>
    
   );

@@ -36,22 +36,28 @@ const friends = [
 
 
 
-
  const Card = (props) =>{
 
 
- const isOn = "Online";
+
+const isOn = "Online";
 const isOff = "Offline";
-const status = props.isOnline ? isOn : isOff;
+const status = props.isOnline;
+const isOnline = props.isOnline ? isOn : isOff;
 
+const activeCls = { [status ? "active" : "inactive"]: true };
+const addClass=  clsx({
+...activeCls,
 
+ 
+});
 
 return (
 <li className="box-f">
    <img src={props.avatar} alt="Avatar" width="48" />
-  <p>{props.name}</p>
+  <p className="p">{props.name}</p>
 
-  <p className="className">{status}</p>
+  <p className={addClass}>{isOnline}</p>
 </li>
 ) 
 };
