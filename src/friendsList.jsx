@@ -32,35 +32,27 @@ const friends = [
     "id": 1284
   }
 ];
-const isOnline = (friends) =>{
- const isOn = "isOnline";
-const isOff = "isOffline";
-const status = friends.isOnline; 
-return (
-    status ? isOn : isOff
-)
-}
+
+
+
  const Card = (props) =>{
-// const isOn = "isOnline";
-// const isOff = "isOffline";
-// const status = {props.status};
-    return (
+
+
+ const isOn = "Online";
+const isOff = "Offline";
+
+
+return (
 <li className="box-f">
    <img src={props.avatar} alt="Avatar" width="48" />
   <p>{props.name}</p>
-  <p>{isOnline}</p>
-
-
+  <p>{props.isOnline ? isOn : isOff}</p>
 </li>
-    )
+) 
 };
 
 const FriendList = () =>{
- 
-
-
-
-    return (
+  return (
     <div>
        <ul className="ul-f"> 
         {friends.map(user => 
@@ -69,7 +61,8 @@ const FriendList = () =>{
         key={user.id}
         avatar={user.avatar}
         name={user.name}
-        status={user.isOnline}
+        isOnline={user.isOnline}
+       
         />
         
       )}
