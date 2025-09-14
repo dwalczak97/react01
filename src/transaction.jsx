@@ -1,4 +1,4 @@
-export default TransactionHistory;
+
 const transactions = [
   {
     id: "1e0700a2-5183-4291-85cc-2065a036a683",
@@ -66,3 +66,36 @@ return (
 </tr>
 ) 
 };
+
+const TransactionHistory = () =>{
+
+return(
+    <table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Currency</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  {transactions.map(one => 
+        <Card
+          
+        key={one.id}
+        type={one.type}
+        amount={one.amount}
+        currency={one.currency}
+       
+        />
+        
+      )}
+  </tbody>
+</table>
+)
+
+
+}
+
+export default TransactionHistory;
