@@ -1,4 +1,5 @@
 import "./friendsList.css"
+import clsx from "clsx";
 
 const friends = [
   {
@@ -35,18 +36,22 @@ const friends = [
 
 
 
+
  const Card = (props) =>{
 
 
  const isOn = "Online";
 const isOff = "Offline";
+const status = props.isOnline ? isOn : isOff;
+
 
 
 return (
 <li className="box-f">
    <img src={props.avatar} alt="Avatar" width="48" />
   <p>{props.name}</p>
-  <p>{props.isOnline ? isOn : isOff}</p>
+
+  <p className="className">{status}</p>
 </li>
 ) 
 };

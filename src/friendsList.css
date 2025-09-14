@@ -13,3 +13,9 @@
    display: flex;
    gap: 20px;
 }
+.active{
+    color: limegreen;
+}
+.inactive{
+    color: red;
+}
