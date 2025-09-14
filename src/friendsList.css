@@ -1,0 +1,15 @@
+.box-f{
+    border: 2px solid black;
+    border-radius: 10px;
+     list-style-type: none;
+     width: 70px;
+     height: 150px;
+       display:flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+}
+.ul-f{
+   display: flex;
+   gap: 20px;
+}

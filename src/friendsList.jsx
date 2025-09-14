@@ -1,19 +1,6 @@
+import "./friendsList.css"
 
-const Card = (props) =>{
-   <li>
-    <div  >
-  <img src={props.avatar} alt="Avatar" width="48" />
-  <p>{props.name}</p>
-  <p>{props.status}</p>
-</div>
-</li>
-   
-};
-
-
- const FriendList = () =>{
-
-    const friends = [
+const friends = [
   {
     "avatar": "https://cdn-icons-png.flaticon.com/512/1998/1998592.png",
     "name": "Mango",
@@ -45,31 +32,51 @@ const Card = (props) =>{
     "id": 1284
   }
 ];
-  return (
-        <div>
-       <ul>
+const isOnline = (friends) =>{
+ const isOn = "isOnline";
+const isOff = "isOffline";
+const status = friends.isOnline; 
+return (
+    status ? isOn : isOff
+)
+}
+ const Card = (props) =>{
+// const isOn = "isOnline";
+// const isOff = "isOffline";
+// const status = {props.status};
+    return (
+<li className="box-f">
+   <img src={props.avatar} alt="Avatar" width="48" />
+  <p>{props.name}</p>
+  <p>{isOnline}</p>
 
-        {/* <Card
-         avatar={friends.avatar}
-         name={friends.name}
-         status={friends.isOnline}
-         key={friends.id}
-        /> */}
 
-           {friends.map(user => 
+</li>
+    )
+};
+
+const FriendList = () =>{
+ 
+
+
+
+    return (
+    <div>
+       <ul className="ul-f"> 
+        {friends.map(user => 
         <Card
           
-          key={user.id}
-          avatar={user.avatar}
-         name={user.name}
-         status={user.isOnline}
-         
+        key={user.id}
+        avatar={user.avatar}
+        name={user.name}
+        status={user.isOnline}
         />
-      )}
         
-</ul>
+      )}
+  
+        </ul>
     
-       </div>
+    </div>
     );
 };
 
